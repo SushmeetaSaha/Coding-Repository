@@ -1,6 +1,3 @@
-from urllib.request import CacheFTPHandler
-
-
 class Class:
     company = "Youtube"
     employee = ["Shauary","Shubham","Programmer","Data Scientist"]
