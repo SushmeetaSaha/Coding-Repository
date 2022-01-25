@@ -225,7 +225,7 @@ class Game:
                 break
 Game.Guess()
 """
-"""
+
 class A(object):
     def __new__(cls):
         while True:
@@ -239,4 +239,3 @@ class A(object):
                 print("Game Over")
                 break
 A()
-"""
