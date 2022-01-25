@@ -226,16 +226,18 @@ class Game:
 Game.Guess()
 """
 
-class A(object):
-    def __new__(cls):
-        while True:
-            import random
-            user = input("Enter >>> ")
-            r = random.randint(1,9)
-            if user == str(r):
-                print("Correct")
-                break
-            elif user == 'quit':
-                print("Game Over")
-                break
-A()
+# class A(object):
+#     def __new__(cls):
+#         while True:
+#             import random
+#             user = input("Enter >>> ")
+#             r = random.randint(1,9)
+#             if user == str(r):
+#                 print("Correct")
+#                 break
+#             elif user == 'quit':
+#                 print("Game Over")
+#                 break
+# A()
+
+
