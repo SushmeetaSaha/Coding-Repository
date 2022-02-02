@@ -1,19 +1,5 @@
 #include <stdio.h>
 
-void reverse(int arr[], int lenght)
-{
-    for (int a = 0; a <= lenght / 2; a++)
-    {
-        int temp;
-        temp = arr[a];
-        arr[a] = arr[lenght - a];
-        temp = arr[lenght - a];
-    }
-    for (int a = 0; a < lenght; a++)
-    {
-        printf("%d\n", arr[a]);
-    }
-}
 
 int main()
 {
@@ -55,12 +41,16 @@ int main()
         printf("The element at index %d is %d \n",a+1,array[a]);
     }
     */
+
     int list[5];
     list[0] = 1;
     list[1] = 2;
     list[2] = 3;
     list[3] = 4;
     list[4] = 5;
-    reverse(list, 5);
+    for(int index = 0; index<5; index++)
+    {
+        printf("%d\n",list[index]);
+    }
     return 0;
 }
