@@ -2,7 +2,9 @@
 
 void reverse(int arr[],int lenght){
     for(int a = 0; a <= lenght; a++){
-        arr[a] = lenght-1;
+        for(int c = lenght; c >= 0; c++){
+            arr[c] = arr[a];
+        }
     }
 }
 
@@ -45,11 +47,14 @@ int main() {
         printf("The element at index %d is %d \n",a+1,array[a]);
     }
     */
-    int hello[6] = {1,2,3,4,5,6,7};
-    reverse(hello,6);
-    for(int c = 0; c <= 6; c ++){
-        printf("%d\n",hello[c]);
+    int hello[4];
+    hello[0]=1;
+    hello[1]=2;
+    hello[2]=3;
+    hello[3] =4 ;
+    reverse(hello,4);
+    for(int heell = 0;heell<=4; heell++){
+        printf("%d\n",hello[heell]);
     }
-
     return 0;
 }
