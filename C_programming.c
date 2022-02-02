@@ -1,18 +1,26 @@
-#include<stdio.h>
+#include <stdio.h>
 
-void reverse(int arr[],int lenght){
-    for(int a = 0; a <= lenght; a++){
-        for(int c = lenght; c >= 0; c++){
-            arr[c] = arr[a];
-        }
+void reverse(int arr[], int lenght)
+{
+    for (int a = 0; a <= lenght / 2; a++)
+    {
+        int temp;
+        temp = arr[a];
+        arr[a] = arr[lenght - a];
+        temp = arr[lenght - a];
+    }
+    for (int a = 0; a < lenght; a++)
+    {
+        printf("%d\n", arr[a]);
     }
 }
 
-int main() {
+int main()
+{
 
-    // 
+    //
 
-    // Practise set 
+    // Practise set
     /*
     int lenght = 9;
     int arr[lenght];
@@ -47,14 +55,12 @@ int main() {
         printf("The element at index %d is %d \n",a+1,array[a]);
     }
     */
-    int hello[4];
-    hello[0]=1;
-    hello[1]=2;
-    hello[2]=3;
-    hello[3] =4 ;
-    reverse(hello,4);
-    for(int heell = 0;heell<=4; heell++){
-        printf("%d\n",hello[heell]);
-    }
+    int list[5];
+    list[0] = 1;
+    list[1] = 2;
+    list[2] = 3;
+    list[3] = 4;
+    list[4] = 5;
+    reverse(list, 5);
     return 0;
 }
