@@ -1,6 +1,13 @@
 #include <stdio.h>
 
-
+void reverse(int list[],int lenght){
+    int temp;
+    for(int item = 0; item<lenght/2;item++){
+        temp = list[item];
+        list[item] = list[lenght-item];
+        list[lenght-item] = temp;
+    }
+}
 int main()
 {
 
@@ -41,13 +48,14 @@ int main()
         printf("The element at index %d is %d \n",a+1,array[a]);
     }
     */
-
+    // Reverse a array in c language in this file Smarty Pie OP Boltai
     int list[5];
     list[0] = 1;
     list[1] = 2;
     list[2] = 3;
     list[3] = 4;
     list[4] = 5;
+    reverse(list,4);
     for(int index = 0; index<5; index++)
     {
         printf("%d\n",list[index]);
