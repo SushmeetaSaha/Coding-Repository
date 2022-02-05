@@ -8,6 +8,19 @@ void reverse(int list[],int lenght){
         list[lenght-item] = temp;
     }
 }
+int occur(char string[],char find){
+    int answer = 0;
+    int index = 0;
+    while(string[index] != '\0'){
+        if(string[index]==find){
+            answer =+ 1;
+            printf("The string has the character %c \n",find);
+            break;
+        }
+        index++;
+    }
+    return answer;
+}
 int main()
 {
 
@@ -49,16 +62,20 @@ int main()
     }
     */
     // Reverse a array in c language in this file Smarty Pie OP Boltai
-    int list[5];
-    list[0] = 1;
-    list[1] = 2;
-    list[2] = 3;
-    list[3] = 4;
-    list[4] = 5;
-    reverse(list,4);
-    for(int index = 0; index<5; index++)
-    {
-        printf("%d\n",list[index]);
-    }
+    // int list[5];
+    // list[0] = 1;
+    // list[1] = 2;
+    // list[2] = 3;
+    // list[3] = 4;
+    // list[4] = 5;
+    // reverse(list,4);
+    // for(int index = 0; index<5; index++)
+    // {
+    //     printf("%d\n",list[index]);
+    // }
+    char string[20] = "Shauary Saha";
+    int question = occur(string,'S');
+    if(question==0)
+    puts("The string does not have this character in it");
     return 0;
 }
