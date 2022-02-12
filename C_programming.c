@@ -21,6 +21,29 @@ int occur(char string[],char find){
     }
     return answer;
 }
+void pattern(){
+char b = 'A';
+
+	int run = 0;	while(run<=4){
+
+		for(int i = 1; i<6; i++){		
+
+			for(int k = 0; k<i; k++){
+
+				printf("%c",b);
+
+			}
+
+			printf("\n");
+
+		}
+
+		b++;
+
+		run++;
+
+	}
+}
 int main()
 {
 
@@ -75,7 +98,9 @@ int main()
     // }
     char string[20] = "Shauary Saha";
     int question = occur(string,'S');
-    if(question==0)
+    if(question==0){
     puts("The string does not have this character in it");
+    }
+    pattern();
     return 0;
 }
