@@ -21,6 +21,15 @@ int occur(char string[],char find){
     }
     return answer;
 }
+void Dynamic_memory_Allocation(){
+    int *ptr = (int *) malloc(4*sizeof(int));
+    for(int i = 0; i<4; i++){
+        ptr[i] = i+1;
+    }
+    for(int i = 0; i<4; i++){
+        printf("%d\n",ptr[i]);
+    }
+}
 int main()
 {
 
@@ -73,6 +82,7 @@ int main()
     // {
     //     printf("%d\n",list[index]);
     // }
+    Dynamic_memory_Allocation();
     char string[20] = "Shauary Saha";
     int question = occur(string,'S');
     if(question==0)
