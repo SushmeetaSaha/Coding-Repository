@@ -229,7 +229,36 @@ void Bank :: loan_from_the_bank(int amount,int years_to_pay){
     int total_amount;
     total_amount = amount + (years_to_pay*global_interest_on_loan);
     cout<<"You have to return "<<total_amount<<" rupees to the bank on the amount of "<<amount<<" on the interest rate of "<<global_interest_on_loan<<"% "<<endl;
-}int main()
+}
+class give{
+    protected:
+       int a,b;
+    public:
+        void set(int h1,int h2){
+            a = h1;
+            b = h2;
+        }
+        void display(){
+            cout<<a<<" + "<<b<<"i "<<endl;
+        }
+        
+        int give_a(){
+            return a;
+        }
+        
+        int give_b(){
+            return b;
+        }
+};
+
+class sum : public give{
+    public:
+       void Sum(give j1,give j2){
+           cout<<"The sum is "<<j1.give_a()+j2.give_a()<<" + "<<j1.give_b()+j2.give_b()<<"i ";
+       }
+};
+
+int main()
 {
     // Complex a,b;
     // a.set_number(1,2);
