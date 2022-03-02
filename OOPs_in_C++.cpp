@@ -15,6 +15,23 @@ Four Pillars of OOPs
 4. Polymorphism
 
 */
+/*
+class A{
+    public:
+        void show(){
+            cout<<"Hello YesSmartyPie"<<endl;
+        }
+};
+class B : public A{
+    
+};
+class C : public A{
+    
+};
+class D : public B,public C{
+    
+};
+*/
 class shop
 {
     int itemId[10];
