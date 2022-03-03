@@ -105,6 +105,23 @@ int main()
     // {
     //     printf("%d\n",list[index]);
     // }
+    /*
+    int array[] = {100,22,32};
+    int s = max(array,2);
+    printf("The greatest element is %d\n",s);
+    */
+    /*
+    int user;
+    printf("Enter the number who's table you want \n");
+    scanf("%d",&user);
+    for(int j = 1; j<=10; j++){
+        printf("%d × %d = %d\n",user,j,user*j);
+    }
+    
+    int s = sum(10);
+    printf("The sum of first 10 natural number is %d\n",s);
+    
+    */
     Dynamic_memory_Allocation();
     char string[20] = "Shauary Saha";
     int question = occur(string,'S');
