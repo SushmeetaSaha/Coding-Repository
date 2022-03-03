@@ -1,4 +1,13 @@
 #include <stdio.h>
+/* This is a function to check whether a number is prime or not */
+int hello(int n){
+    for(int j = 2; j<n;j++){
+        if(n%j==0){
+            return 1;
+        }
+    }
+    return 0;
+}
 
 void reverse(int list[],int lenght){
     int temp;
@@ -121,7 +130,8 @@ int main()
     int s = sum(10);
     printf("The sum of first 10 natural number is %d\n",s);
     
-    */
+    
+    
     Dynamic_memory_Allocation();
     char string[20] = "Shauary Saha";
     int question = occur(string,'S');
@@ -129,5 +139,15 @@ int main()
     puts("The string does not have this character in it");
     }
     pattern();
+    */
+     /* This is a for loop which will use the hello function
+        To check whether a number is prime or not the function
+        Will return 1 if not prime and 0 if it is a prime number  */
+     for(int n = 3; n<=100;n++){
+        s = hello(n);
+        if(s==0){
+            printf("%d\n",n);
+        }
+    }
     return 0;
 }
