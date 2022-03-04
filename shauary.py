@@ -225,20 +225,30 @@ class Game:
                 break
 Game.Guess()
 """
-
-# class A(object):
-#     def __new__(cls):
-#         while True:
-#             import random
-#             user = input("Enter >>> ")
-#             r = random.randint(1,9)
-#             if user == str(r):
-#                 print("Correct")
-#                 break
-#             elif user == 'quit':
-#                 print("Game Over")
-#                 break
-# A()
+"""
+class A(object):
+    def __new__(cls):
+        while True:
+            import random
+            user = input("Enter >>> ")
+            r = random.randint(1,9)
+            if user == str(r):
+                print("Correct")
+                break
+            elif user == 'quit':
+                print("Game Over")
+                break
+A()
+"""
+"""
+Using Regualar Expression module in python.
+Program to find Indian mobile numbers from a string 
+"""
+myString = "+91-9972999999999 +91-792649383929"
+pattern = re.compile(r'91-\d{10}')
+match = pattern.finditer(myString)
+for ma in match:
+    print(ma)
 print("YesSmartyPie")
 
 
