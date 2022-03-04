@@ -318,6 +318,20 @@ class C : public A,public B{
         cout<<"C"<<endl;
     }
 };
+void pattern(int n,char a='A') {
+    char b = a;
+    int run = 1;
+    while(run<=n) {
+        for(int i = 1; i<5; i++) {
+            for(int k = 0; k<i; k++) {
+                cout<<b;
+            }
+            cout<<endl;
+        }
+        b++;
+        run++;
+    }
+}
 int main()
 {
     // Complex a,b;
