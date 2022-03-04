@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <cmath>
+#include <bits/stdc++.h>
 using namespace std;
 
 void name(string name){
@@ -274,7 +272,52 @@ class sum : public give{
            cout<<"The sum is "<<j1.give_a()+j2.give_a()<<" + "<<j1.give_b()+j2.give_b()<<"i ";
        }
 };
+class A1{
+    int data1;
+    public:
+       A1(int a){
+           data1 = a;
+           cout<<data1<<endl;
+           cout<<"A1"<<endl;
+       }
+};
 
+class A2{
+    int data2;
+    public:
+       A2(int a){
+           data2 = a;
+           cout<<data2<<endl;
+        }
+};
+
+class A3 : public A1,public A2{
+    int data3;
+    public:
+        A3(int a,int b,int c):A2(b),A1(a){
+           data3 = c;
+           cout<<data3<<endl;
+        }
+};
+
+class A{
+    public:
+    A(){
+        cout<<"A"<<endl;
+    }
+};
+class B{
+    public:
+    B(){
+        cout<<"B"<<endl;
+    }
+};
+class C : public A,public B{
+    public:
+    C(){
+        cout<<"C"<<endl;
+    }
+};
 int main()
 {
     // Complex a,b;
@@ -283,7 +326,7 @@ int main()
     // Calculator j;
     // // Sum of the complex numbers a and b
     // j.sum_complex(a,b);
-    
+    /*
     cout<<"Welcome to the bank"<<endl;
     int amount,y;
     float interest;
@@ -302,6 +345,6 @@ int main()
     Shauary = Bank(amount,y,interest);
     float REturn = Shauary.simpleInterest(Shauary);
     cout<<"The principal of "<<amount<<" Rupees"<<" after "<<y<<" year will be "<<REturn<<" on the interest of "<<interest<<"% "<<endl;
-    
+    */
     return 0;
 }
