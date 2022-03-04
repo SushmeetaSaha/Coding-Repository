@@ -332,6 +332,17 @@ void pattern(int n,char a='A') {
         run++;
     }
 }
+int table_printing(int n=7) {
+    for (int i = 1; i <= n ; i++ ) {
+
+        for (int j = 1; j <= i ; j++ ) {
+
+            cout<<" "<<i*j;
+
+        }
+        cout<<endl;
+    }
+}
 int main()
 {
     // Complex a,b;
