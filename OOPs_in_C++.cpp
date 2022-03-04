@@ -343,6 +343,27 @@ int table_printing(int n=7) {
         cout<<endl;
     }
 }
+/* This is a function bill genrator
+   Which will sum all the number you passed to it 
+   If you give 0 as input the loop will break and it
+   Will show you the grand total
+*/
+void bill_genrator(void){
+int user;
+    int sum = 0;
+    while(true){
+      cout<<"Enter "<<endl;
+      scanf("%d",&user);
+      if(user == 0){
+         break;
+      }
+      
+      sum = sum + user;
+     
+      cout<<"The sum so far is "<<sum<<endl;
+    }
+    cout<<"The grand total is "<<sum<<endl;
+}
 int main()
 {
     // Complex a,b;
