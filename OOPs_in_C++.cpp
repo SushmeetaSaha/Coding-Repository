@@ -364,6 +364,34 @@ int user;
     }
     cout<<"The grand total is "<<sum<<endl;
 }
+void pattern2(){
+    for(int i = 5; i>=1;i--){
+        for(int j = 1; j<=5; j++){
+            if(i>=j){
+                printf("*");
+            }
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+class Complex_advance{
+      int a,b;
+      public:
+         void setData(int a,int b){
+             this->a = a;
+             this->b = b;
+         }
+         void show(){
+             cout<<"The complex number is "<<a<<" + "<<b<<"i "<<endl;
+         }
+         Complex_advance operator+(Complex obj){
+              Complex_advance temp;
+              temp.a = a + obj.a;
+              temp.b = b + obj.b;
+              return temp;
+         }
+};
 int main()
 {
     // Complex a,b;
