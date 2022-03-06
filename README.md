@@ -1,1 +1,1 @@
-This is my Public Folder for learning coding 
+This is my coding folder which is public in github to use
