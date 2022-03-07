@@ -62,6 +62,19 @@ void Dynamic_memory_Allocation(){
     for(int i = 0; i<4; i++){
         printf("%d\n",ptr[i]
 }
+void pattern2(void){
+    for(int j = 1; j<=5; j++){
+         for(int k = 1; k<=5; k++){
+		if(j<=k){
+		    printf(" *");
+		}
+		else{
+	            printf(" ");
+		}
+	 }
+	 printf("\n");
+    }
+}
 int main()
 {
 
