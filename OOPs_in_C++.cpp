@@ -448,6 +448,22 @@ void pattern3(){
        printf("\n");
     }
 }
+/* This will print a triangle but not a reversed triangle */
+void pattern4(void){
+     for(int j = 1; j<=5; j++){
+	if(j%2!=0){
+		for(int k = 5; k>=1; k--){
+			if(j>=k){
+				printf(" *");
+			}
+			else{
+			        printf(" ");
+			}
+		}
+		cout<<endl;
+       }
+     }
+}
 int main()
 {
     // Complex a,b;
