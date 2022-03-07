@@ -394,7 +394,7 @@ class Complex_advance{
 };
 /*
 The below classes are the example of the use of 
-virutal function during the run time
+virtual function during the run time
 Name of the classes are:
 1. Cwh
 2. CwhVideo
