@@ -432,7 +432,22 @@ class CwhVideo : public Cwh{
 	      	cout<<"The name of the tutorial is : "<<title<<endl<<"Rating of the tutorial is "<<rating<<endl<<"The length of the tutorial is "<<length<<" minutes"<<endl;
 	      }
 };
-
+/* The function pattern3 will print a reverse triangle of the 
+shape of (*) 
+*/
+void pattern3(){
+    for(int j = 1; j<=5; j++){
+	for(int k = 1; k<=5; k++){
+		if(j<=k){
+		     printf(" *");
+		}
+		else{
+		     printf(" ");
+		}
+	}		
+       printf("\n");
+    }
+}
 int main()
 {
     // Complex a,b;
