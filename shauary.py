@@ -240,6 +240,17 @@ class A(object):
                 break
 A()
 """
+# This is a function which will print a star pattern ..
+def pattern_of_star():
+    i = 1
+    while i<=5:
+        for a in range(1,6):
+            if i<=a:
+               print("*",end=" ")
+            else:
+               print(" ",end=" ")
+         print()
+         i= i + 1
 """
 Using Regualar Expression module in python.
 Program to find Indian mobile numbers from a string 
