@@ -392,6 +392,47 @@ class Complex_advance{
               return temp;
          }
 };
+/*
+The below classes are the example of the use of 
+virutal function during the run time
+Name of the classes are:
+1. Cwh
+2. CwhVideo
+3. CwhText
+*/
+class Cwh{
+	protected:
+	   string title;
+	   float rating;
+	public:
+	   Cwh(float rating,string title){
+	   	this->rating = rating;
+	   	this->title = title;
+	   }
+	   Cwh(){}
+	   virtual void display(){}
+};
+class CwhText : public Cwh{
+	int words;
+	public:
+	      CwhText(int words,float rating,string title):Cwh(rating,title){
+	      	this->words = words;	
+	      }
+	      void display(){
+	      	cout<<"The name of the tutorial is : "<<title<<endl<<"Rating of the tutorial is "<<rating<<endl<<"No of words in the tutorial is "<<words<<endl;
+	      }
+};
+class CwhVideo : public Cwh{
+	int length;
+	public:
+	      CwhVideo(float length,float rating,string title):Cwh(rating,title){
+	      	this->length = length;	
+	      }
+	      void display(){
+	      	cout<<"The name of the tutorial is : "<<title<<endl<<"Rating of the tutorial is "<<rating<<endl<<"The length of the tutorial is "<<length<<" minutes"<<endl;
+	      }
+};
+
 int main()
 {
     // Complex a,b;
