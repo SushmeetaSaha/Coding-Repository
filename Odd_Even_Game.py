@@ -9,6 +9,9 @@ def toss():
 	userW = False
 	user1 = input("Odd Ya Even ")
 	user = int(input("Enter the number between 1-10 "))
+	if user > 10:
+		print("Invalid number was given")
+		quit()
 	userWW = False	
 	# If User decide Even
 	if user1 == 'Even' and user < 10 and user > 0 :
@@ -47,6 +50,9 @@ def Batting():
 	run = 0
 	while True:
 		user = int(input("Bat "))
+		if user >10:
+				print("Invalid range of number was given ")
+				quit()
 		computer = random.randint(1,10)
 		if computer == user:
 			print("Out")
@@ -62,6 +68,9 @@ def Batting2(tar):
 	run = 0
 	while True:
 		user = int(input("Bat "))
+		if user >10:
+				print("Invalid range of number was given ")
+				quit()
 		computer = random.randint(1,10)
 		if run == tar:
 			print("User Win")
@@ -82,6 +91,9 @@ def Bowling():
 		while True:
 			ran = random.randint(1,10)
 			user = int(input("Throw the bowl "))
+			if user >10:
+				print("Invalid number was given ")
+				quit()
 			if user == ran and user<=10:
 				print("Out")
 				print(run)
@@ -95,6 +107,9 @@ def b2(tar):
 	runs = 0
 	while True:
 		user = int(input("Bowl "))
+		if user > 10:
+			print("Invalid number was given ")
+			quit()
 		com = random.randint(1,10)
 		if runs >= tar:
 			print("Com win")
@@ -111,25 +126,27 @@ def b2(tar):
 			
 t = toss()
 if t == True:
-	h = input("Batting or bowling ")
-	if h == "Batting" or h == "batting":
+	h = input("Batting or Bowling ")
+	h = h.lower()
+	if h == "batting":
 		score = Batting()
 		print(f"Computer has to score {score} runs")
 		h = b2(score)
-	elif h == "bowling" or h == "Bowling":
+	elif  h == "bowling":
 		b = Bowling()
 		time.sleep(1.67)
 		print(f"You have to make {b}")
 		h = Batting2(b)
 elif t == False:
-	hello = ["Batting","Bowling"]
+	hello = ["batting","bowling"]
 	h = random.choice(hello)
-	if h == "Batting" or h == "batting":
+	print(f"Computer choice to {h}")
+	if h == "batting":
 		score = Batting()
 		score = score +1
 		print(f"Computer has to score {score} runs")
 		h = b2(score)
-	elif h == "bowling" or h == "Bowling":
+	elif h == "bowling" :
 		b = Bowling()
 		time.sleep(1.67)
 		print(f"You have to make {b}")
