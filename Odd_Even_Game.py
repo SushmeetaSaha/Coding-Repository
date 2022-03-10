@@ -7,14 +7,14 @@ def toss():
 	# Variables for doing the toss
 	com = random.randint(1,10)
 	userW = False
-	user1 = input("Odd Ya Even ")
+	user1 = input("Odd Ya Even ").lower()
 	user = int(input("Enter the number between 1-10 "))
 	if user > 10:
 		print("Invalid number was given")
 		quit()
 	userWW = False	
 	# If User decide Even
-	if user1 == 'Even' and user < 10 and user > 0 :
+	if user1 == 'even' and user < 10 and user > 0 :
 		if (user+com)%2 == 0:
 			
 			time.sleep(2)
@@ -29,7 +29,7 @@ def toss():
 			print("Computer Win")
 			return userWW
 	# If user choose Odd
-	elif user1=="Odd" and user<10 and user>0:
+	elif user1=="odd" and user<10 and user>0:
 		if (user+com)%2 != 0:
 			
 			time.sleep(2)
@@ -61,7 +61,7 @@ def Batting():
 		else:
 			print(f"computer was {computer}")
 			run = run + user
-	return run
+	return run+1
 	
 #Batting for a particular target
 def Batting2(tar):
@@ -103,7 +103,7 @@ def Bowling():
 				print(f"computer was {ran}")
 				run = run + ran
 				
-def b2(tar):
+def bowling2(tar):
 	runs = 0
 	while True:
 		user = int(input("Bowl "))
@@ -111,43 +111,42 @@ def b2(tar):
 			print("Invalid number was given ")
 			quit()
 		com = random.randint(1,10)
-		if runs >= tar:
-			print("Com win")
-			break
 		print(f"Computer was {com}")
 		if user == com:
 			print("Duck")
 			time.sleep(1)
 			print(f"Computer not able to completed the target of {tar}")
+			print("User Win")
+			print("Congratulations !")
 			break	
 		else:
 			runs = runs + com
 			
-			
-t = toss()
-if t == True:
-	h = input("Batting or Bowling ")
-	h = h.lower()
-	if h == "batting":
-		score = Batting()
-		print(f"Computer has to score {score} runs")
-		h = b2(score)
-	elif  h == "bowling":
-		b = Bowling()
-		time.sleep(1.67)
-		print(f"You have to make {b}")
-		h = Batting2(b)
-elif t == False:
-	hello = ["batting","bowling"]
-	h = random.choice(hello)
-	print(f"Computer choice to {h}")
-	if h == "batting":
-		score = Batting()
-		score = score +1
-		print(f"Computer has to score {score} runs")
-		h = b2(score)
-	elif h == "bowling" :
-		b = Bowling()
-		time.sleep(1.67)
-		print(f"You have to make {b}")
-		h = Batting2(b)
+if __name__ == "__main__":			
+	t = toss()
+	if t == True:
+		h = input("Batting or Bowling ")
+		h = h.lower()
+		if h == "batting":
+			score = Batting()
+			print(f"Computer has to score {score} runs")
+			h = bowling2(score)
+		elif  h == "bowling":
+			b = Bowling()
+			time.sleep(1.67)
+			print(f"You have to make {b}")
+			h = Batting2(b)
+	elif t == False:
+		hello = ["batting","bowling"]
+		h = random.choice(hello)
+		print(f"Computer will do {h}")
+		if h == "batting":
+			score = Batting()
+			score = score +1
+			print(f"Computer has to score {score}        runs")
+			h = b2(score)
+		elif h == "bowling" :
+			b = Bowling()
+			time.sleep(1.67)
+			print(f"You have to make {b}")
+			h = Batting2(b)
