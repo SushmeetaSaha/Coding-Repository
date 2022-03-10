@@ -464,6 +464,17 @@ void pattern4(void){
        }
      }
 }
+void file_handling(){
+    int total = 0;
+    ifstream taking;
+    taking.open("hello.txt");
+    while (!taking.eof())
+    {
+        taking>>st2;
+        total += stoi(st2) ;
+    }
+    printf("Hello the sum of the numbers in the file is %d\n",total);	
+}
 int main()
 {
     // Complex a,b;
