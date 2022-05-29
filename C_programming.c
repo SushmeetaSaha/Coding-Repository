@@ -8,6 +8,26 @@ int hello(int n){
     }
     return 0;
 }
+int binarySearch(int arr[],int size,int element){
+    int low = 0;
+    int high = size-1;
+    int mid = (low + high)/2;
+    while(low<=high){
+        if(arr[mid] == element){
+            return mid;
+        }
+        if(arr[mid] < element){
+            //printf("element is big");
+            low = mid +1;
+        }
+        else{
+            printf("element is small");
+            high = mid -1;
+        }
+        mid = (low+high)/2;
+    }
+    return -1;
+}
 
 void reverse(int list[],int lenght){
     int temp;
