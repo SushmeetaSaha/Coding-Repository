@@ -8,6 +8,24 @@ int hello(int n){
     }
     return 0;
 }
+// Function for inserting data in between a circular link list
+struct Node * insertAtIndex_circularLL(struct Node *ptr,int index,int data){
+    struct Node * h = ptr;
+    struct Node *address;
+    struct Node *user = (struct Node *) malloc(sizeof(struct Node));
+    int i = 0;
+    user->data = data;
+    while(i != index-1){
+        if(h->next == ptr){
+            break;
+        }
+        i++;
+        h = h->next;
+    }
+    user->next = h->next;
+    h->next = user;
+    return h;
+}
 // Inserting element at the beginning of the link list
 struct Node * insertAtFirst(struct Node *head,int data){
     struct Node * hello = (struct Node *) malloc(sizeof(struct Node));
