@@ -8,6 +8,46 @@ int hello(int n){
     }
     return 0;
 }
+// Inserting element at the beginning of the link list
+struct Node * insertAtFirst(struct Node *head,int data){
+    struct Node * hello = (struct Node *) malloc(sizeof(struct Node));
+    hello->data = data;
+    hello->next = head;
+    return hello;
+}
+// For Inserting element in between of a link list
+struct Node * insertAtIndex(struct Node *head,int data,int index){
+    struct Node * hello = (struct Node *) malloc(sizeof(struct Node));
+    hello->data = data;
+    struct Node *ptr = head;
+    int i = 0;
+    while(i!=index-1){
+        i++;
+        ptr = ptr->next;
+    }
+    hello->next = ptr->next;
+    ptr->next = hello;
+}
+// For Inserting element at the end of the link list
+struct Node * insertAtEnd(struct Node *head,int data){
+    struct Node *ptr = head;
+    struct Node *hello = (struct Node *)malloc(sizeof(struct Node));
+    hello->data = data;
+    hello->next = NULL;
+    while(ptr->next != NULL){
+        ptr = ptr->next;
+    }
+    ptr->next = hello;
+}
+// Traversal in a link list
+void hello(struct Node *ptr){
+    while (ptr != NULL)
+    {
+        printf("Element: %d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
+ 
 int binarySearch(int arr[],int size,int element){
     int low = 0;
     int high = size-1;
