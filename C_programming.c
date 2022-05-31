@@ -8,6 +8,21 @@ int hello(int n){
     }
     return 0;
 }
+struct Node * del(struct Node *head){
+    struct Node * ptr = head;
+    struct Node *ptr2 = head->next;
+    while(1){
+        if(ptr->next == head){
+            break;
+        }
+        else{
+            ptr = ptr->next;
+        }
+    }
+    ptr->next = ptr2;
+    free(head);
+    return ptr2;
+}
 // Function for inserting data in between a circular link list
 struct Node * insertAtIndex_circularLL(struct Node *ptr,int index,int data){
     struct Node * h = ptr;
